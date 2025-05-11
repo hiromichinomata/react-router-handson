@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router';
 import Layout from './layout';
 import Home from './pages/home';
 import About from './pages/about';
+import Articles from './pages/article';
+import ArticleDetail from './pages/article_detail';
 import PostDetail from './pages/post_detail';
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/post_detail/:id" element={<PostDetail />} />
+          <Route path="articles" element={<Articles />} />
+          <Route path="articles/:id" element={<ArticleDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

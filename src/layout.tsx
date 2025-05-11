@@ -16,6 +16,10 @@ const Layout: React.FC = () => {
             About
           </NavLink>
           {" | "}
+          <NavLink to="/articles" className={({ isActive }) => isActive ? 'active' : ''}>
+            Article
+          </NavLink>
+          {" | "}
           <NavLink to="/post_detail/1" className={({ isActive }) => isActive ? 'active' : ''}>
             Posts
           </NavLink>
