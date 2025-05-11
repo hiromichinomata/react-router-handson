@@ -2,11 +2,14 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router';
 import Layout from './layout';
 import NotFound from './pages/not_found';
-import Home from './pages/home';
+import ProtectedRoute from './components/protected_route';
 import About from './pages/about';
 import Articles from './pages/article';
 import ArticleDetail from './pages/article_detail';
 import Comments from './pages/comments';
+import Dashboard from './pages/dashboard';
+import Home from './pages/home';
+import Login from './pages/login';
 import PostDetail from './pages/post_detail';
 
 function App() {
@@ -21,6 +24,15 @@ function App() {
           <Route path="articles/:id" element={<ArticleDetail />}>
             <Route path="comments" element={<Comments />} />
           </Route>
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="login" element={<Login />} />
           {/* 存在しないルートのキャッチオール */}
           <Route path="*" element={<NotFound />} />
         </Route>

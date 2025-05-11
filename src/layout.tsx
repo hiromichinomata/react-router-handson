@@ -20,6 +20,10 @@ const Layout: React.FC = () => {
             Article
           </NavLink>
           {" | "}
+          <NavLink to="/dashboard" className={({ isActive }) => isActive ? 'active' : ''}>
+            Dashboard
+          </NavLink>
+          {" | "}
           <NavLink to="/post_detail/1" className={({ isActive }) => isActive ? 'active' : ''}>
             Posts
           </NavLink>
