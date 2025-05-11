@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router';
 import Layout from './layout';
+import NotFound from './pages/not_found';
 import Home from './pages/home';
 import About from './pages/about';
 import Articles from './pages/article';
@@ -20,6 +21,8 @@ function App() {
           <Route path="articles/:id" element={<ArticleDetail />}>
             <Route path="comments" element={<Comments />} />
           </Route>
+          {/* 存在しないルートのキャッチオール */}
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
