@@ -10,6 +10,7 @@ import Comments from './pages/comments';
 import Dashboard from './pages/dashboard';
 import Home from './pages/home';
 import Login from './pages/login';
+import Post from './pages/post';
 import PostDetail from './pages/post_detail';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/post_detail/:id" element={<PostDetail />} />
+          <Route path="/posts" element={<Post />} />
+          <Route path="/posts/:id" element={<PostDetail />} />
           <Route path="articles" element={<Articles />} />
           <Route path="articles/:id" element={<ArticleDetail />}>
             <Route path="comments" element={<Comments />} />

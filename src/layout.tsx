@@ -20,12 +20,12 @@ const Layout: React.FC = () => {
             Article
           </NavLink>
           {" | "}
-          <NavLink to="/dashboard" className={({ isActive }) => isActive ? 'active' : ''}>
-            Dashboard
+          <NavLink to="/posts" className={({ isActive }) => isActive ? 'active' : ''}>
+            Posts
           </NavLink>
           {" | "}
-          <NavLink to="/post_detail/1" className={({ isActive }) => isActive ? 'active' : ''}>
-            Posts
+          <NavLink to="/dashboard" className={({ isActive }) => isActive ? 'active' : ''}>
+            Dashboard
           </NavLink>
         </nav>
       </header>
