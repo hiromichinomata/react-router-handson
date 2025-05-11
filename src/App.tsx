@@ -5,6 +5,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Articles from './pages/article';
 import ArticleDetail from './pages/article_detail';
+import Comments from './pages/comments';
 import PostDetail from './pages/post_detail';
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/post_detail/:id" element={<PostDetail />} />
           <Route path="articles" element={<Articles />} />
-          <Route path="articles/:id" element={<ArticleDetail />} />
+          <Route path="articles/:id" element={<ArticleDetail />}>
+            <Route path="comments" element={<Comments />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router';
+import { useParams, Outlet, Link } from 'react-router';
 
 interface Article {
   id: number;
@@ -34,6 +34,11 @@ const ArticleDetail: React.FC = () => {
       <h2>{article.title}</h2>
       <p>{article.content}</p>
       <Link to="/articles">記事一覧へ戻る</Link>
+      <div>
+        <Outlet />
+      </div>
+      {/* コメントページへリンク */}
+      <Link to="comments">コメントを見る</Link>
     </div>
   );
 };
